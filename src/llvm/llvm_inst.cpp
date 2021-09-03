@@ -7,6 +7,6 @@ namespace ionshared {
     }
 
     std::string LlvmInst::getId() const {
-        return this->value->getName();
+        return this->value->getName().str();
     }
 }

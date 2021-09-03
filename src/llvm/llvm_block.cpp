@@ -7,12 +7,12 @@ namespace ionshared {
         //
     }
 
-    std::shared_ptr<IrBuilder> LlvmBlock::getBuilder() {
+    std::shared_ptr<llvm::IRBuilder<>> LlvmBlock::getBuilder() {
         if (this->cachedBuilder.has_value()) {
             return *this->cachedBuilder;
         }
 
-        this->cachedBuilder = std::make_shared<IrBuilder>(llvm::IRBuilder<>(this->value));
+        this->cachedBuilder = std::make_shared<llvm::IRBuilder<>>(this->value);
 
         return *this->cachedBuilder;
     }
