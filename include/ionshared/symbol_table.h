@@ -3,7 +3,7 @@
 #include <list>
 #include <string>
 #include <ionshared/container/map.h>
-#include <ionshared/misc/helpers.h>
+#include <ionshared/helpers.h>
 
 namespace ionshared {
     template<typename T>

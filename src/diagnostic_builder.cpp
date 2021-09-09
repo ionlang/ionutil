@@ -1,5 +1,5 @@
-#include <ionshared/misc/util.h>
-#include <ionshared/diagnostics/diagnostic_builder.h>
+#include <ionshared/util.h>
+#include <ionshared/diagnostic_builder.h>
 
 namespace ionshared {
     void DiagnosticBuilder::assertDiagnosticBufferSet() const {

@@ -2,7 +2,7 @@
 
 #include <string>
 #include <vector>
-#include <ionshared/misc/helpers.h>
+#include <ionshared/helpers.h>
 #include <ionshared/container/stack.h>
 #include "source_location.h"
 

@@ -4,7 +4,7 @@
 #include <concepts>
 #include <stdexcept>
 #include <memory>
-#include <ionshared/misc/helpers.h>
+#include <ionshared/helpers.h>
 #include <ionshared/passes/base_pass.h>
 
 namespace ionshared {
@@ -15,7 +15,8 @@ namespace ionshared {
     using TraversalCallback = std::function<bool(T)>;
 
     template<typename TConstruct, typename TConstructKind>
-    class BaseConstruct : public std::enable_shared_from_this<BaseConstruct<TConstruct, TConstructKind>> {
+    class BaseConstruct :
+        public std::enable_shared_from_this<BaseConstruct<TConstruct, TConstructKind>> {
     private:
         typedef BaseConstruct<TConstruct, TConstructKind> Self;
 
@@ -146,7 +147,9 @@ namespace ionshared {
          */
         template<typename TLike>
         [[nodiscard]] std::shared_ptr<TLike> staticCast() {
-            std::shared_ptr<TLike> result = std::static_pointer_cast<TLike>(this->shared_from_this());
+            std::shared_ptr<TLike> result = std::static_pointer_cast<TLike>(
+                this->shared_from_this()
+            );
 
             if (result == nullptr) {
                 throw std::runtime_error("Static pointer cast failed");
@@ -175,16 +178,9 @@ namespace ionshared {
         [[nodiscard]] std::shared_ptr<TConstruct> nativeCast() {
             return this->dynamicCast<TConstruct>();
         }
-
-        std::shared_ptr<TConstruct> forceGetParent() {
-            if (!ionshared::util::hasValue(this->parent)) {
-                throw std::runtime_error("Parent is unset or nullptr");
-            }
-
-            return *this->parent;
-        }
     };
 
     template<typename TDerived, typename TConstruct, typename TConstructKind>
-    concept BaseConstructLike = std::derived_from<TDerived, BaseConstruct<TConstruct, TConstructKind>>;
+    concept BaseConstructLike =
+        std::derived_from<TDerived, BaseConstruct<TConstruct, TConstructKind>>;
 }

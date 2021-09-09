@@ -1,5 +1,5 @@
 #include <sstream>
-#include <ionshared/misc/util.h>
+#include <ionshared/util.h>
 
 namespace ionshared::util {
     bool stringStartsWith(std::string subject, std::string value) {

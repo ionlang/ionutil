@@ -1,7 +1,7 @@
 #pragma once
 
 #include <set>
-#include <ionshared/misc/wrapper.h>
+#include <ionshared/wrapper.h>
 
 namespace ionshared {
     template<typename T>

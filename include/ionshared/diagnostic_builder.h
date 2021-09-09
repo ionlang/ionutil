@@ -1,7 +1,7 @@
 #pragma once
 
 #include <string>
-#include <ionshared/misc/util.h>
+#include <ionshared/util.h>
 #include <ionshared/container/vector.h>
 #include "diagnostic.h"
 

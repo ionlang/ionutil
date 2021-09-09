@@ -2,12 +2,12 @@
 
 #include <vector>
 #include <ionshared/llvm/llvm_module.h>
-#include <ionir/construct/inst.h>
+#include <ionir/inst.h>
 #include <ionir/passes/codegen/llvm_codegen_pass.h>
 #include <ionir/lexical/token.h>
 #include <ionir/lexical/token_kind.h>
 #include <ionir/syntax/parser.h>
-#include <ionir/misc/helpers.h>
+#include <ionir/helpers.h>
 #include "util.h"
 
 namespace ionshared::test::bootstrap {

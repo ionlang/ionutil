@@ -1,6 +1,6 @@
 #pragma once
 
-#include <ionshared/misc/span.h>
+#include <ionshared/span.h>
 
 namespace ionshared {
     struct SourceLocation {

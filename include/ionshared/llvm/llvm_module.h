@@ -2,7 +2,7 @@
 
 #include <string>
 #include <llvm/IR/Module.h>
-#include <ionshared/misc/wrapper.h>
+#include <ionshared/wrapper.h>
 #include "llvm_context.h"
 
 namespace ionshared {

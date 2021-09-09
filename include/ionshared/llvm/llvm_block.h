@@ -3,9 +3,9 @@
 #include <optional>
 #include <llvm/IR/BasicBlock.h>
 #include <llvm/IR/IRBuilder.h>
-#include <ionshared/misc/wrapper.h>
-#include <ionshared/misc/safe_wrapper.h>
-#include <ionshared/misc/helpers.h>
+#include <ionshared/wrapper.h>
+#include <ionshared/safe_wrapper.h>
+#include <ionshared/helpers.h>
 #include "llvm_inst.h"
 
 namespace ionshared {

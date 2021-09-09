@@ -2,8 +2,8 @@
 
 #include <utility>
 #include <vector>
-#include <ionshared/misc/util.h>
-#include <ionshared/misc/wrapper.h>
+#include <ionshared/util.h>
+#include <ionshared/wrapper.h>
 
 namespace ionshared {
     template<typename T>

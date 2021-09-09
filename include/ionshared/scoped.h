@@ -3,9 +3,9 @@
 #include <memory>
 #include <queue>
 #include <functional>
-#include <ionshared/construct/base_construct.h>
-#include <ionshared/tracking/symbol_table.h>
-#include <ionshared/misc/util.h>
+#include <ionshared/base_construct.h>
+#include <ionshared/symbol_table.h>
+#include <ionshared/util.h>
 
 namespace ionshared {
     template<typename T>

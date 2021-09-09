@@ -1,7 +1,7 @@
 #pragma once
 
-#include <ionshared/diagnostics/diagnostic.h>
-#include <ionshared/diagnostics/diagnostic_builder.h>
+#include <ionshared/diagnostic.h>
+#include <ionshared/diagnostic_builder.h>
 
 namespace ionshared {
     struct PassContext {

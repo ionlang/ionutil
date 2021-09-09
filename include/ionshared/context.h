@@ -1,8 +1,8 @@
 #pragma once
 
 #include <vector>
-#include <ionshared/tracking/symbol_table.h>
-#include <ionshared/tracking/scoped.h>
+#include <ionshared/symbol_table.h>
+#include <ionshared/scoped.h>
 
 namespace ionshared {
     template<typename T>

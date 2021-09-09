@@ -7,7 +7,7 @@
 #include <regex>
 #include <string_view>
 #include <cmath>
-#include <ionshared/tracking/symbol_table.h>
+#include <ionshared/symbol_table.h>
 #include "helpers.h"
 
 namespace ionshared::util {

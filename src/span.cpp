@@ -1,5 +1,5 @@
 #include <stdexcept>
-#include <ionshared/misc/span.h>
+#include <ionshared/span.h>
 
 namespace ionshared {
     uint32_t Span::getEndPosition() const noexcept {

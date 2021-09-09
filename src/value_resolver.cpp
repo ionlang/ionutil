@@ -1,4 +1,4 @@
-#include <ionshared/misc/value_resolver.h>
+#include <ionshared/value_resolver.h>
 
 namespace ionshared {
     ValueResolver::ValueResolver(llvm::Module* module) :

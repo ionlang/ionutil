@@ -3,8 +3,8 @@
 #include <concepts>
 #include <vector>
 #include <queue>
-#include <ionshared/misc/helpers.h>
-#include <ionshared/construct/base_construct.h>
+#include <ionshared/helpers.h>
+#include <ionshared/base_construct.h>
 #include "pass_info.h"
 
 namespace ionshared {
@@ -66,7 +66,7 @@ namespace ionshared {
          */
         template<PassLike T>
             requires std::derived_from<T, TPass>
-        bool registerPassWithoutInit(std::shared_ptr<T> pass, PassPriority priority = PassPriority::Normal) {
+        bool registerPassWithoutInit(std::shared_ptr<T> pass, auto priority = PassPriority::Normal) {
             if (this->registeredPasses.contains(&T::passId)) {
                 return false;
             }
@@ -88,14 +88,14 @@ namespace ionshared {
          */
         template<PassLike T>
             requires std::derived_from<T, TPass>
-        bool registerPass(std::shared_ptr<T> pass, PassPriority priority = PassPriority::Normal) {
-            PassInfo info = PassInfo();
+        bool registerPass(std::shared_ptr<T> pass, auto priority = PassPriority::Normal) {
+            auto info = PassInfo();
 
             pass->initialize(info);
 
             std::set<PassId> requirements = info.requirements.unwrapConst();
 
-            for (const auto &requirement : requirements) {
+            for (const auto& requirement : requirements) {
                 if (!this->registeredPasses.contains(requirement)) {
                     return false;
                 }
@@ -128,15 +128,15 @@ namespace ionshared {
             }
 
             /**
-             * Loop through the resulting ordered queue
-             * and start executing passes.
+             * Loop through the resulting ordered queue and start
+             * executing passes.
              */
             while (!runQueue.empty()) {
                 Item item = runQueue.top();
 
                 runQueue.pop();
 
-                for (auto &topLevelConstruct : ast) {
+                for (auto& topLevelConstruct : ast) {
                     item.pass->prepare();
                     item.pass->visit(topLevelConstruct);
                     item.pass->finish();

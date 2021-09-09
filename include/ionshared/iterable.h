@@ -3,7 +3,7 @@
 #include <exception>
 #include <vector>
 #include <optional>
-#include <ionshared/misc/util.h>
+#include <ionshared/util.h>
 #include "generator.h"
 
 namespace ionshared {

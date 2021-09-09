@@ -5,7 +5,7 @@
 #include <stdexcept>
 #include <optional>
 #include <stack>
-#include <ionshared/misc/wrapper.h>
+#include <ionshared/wrapper.h>
 
 namespace ionshared {
     template<typename T>

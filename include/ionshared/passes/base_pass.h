@@ -1,6 +1,6 @@
 #pragma once
 
-#include <ionshared/misc/helpers.h>
+#include <ionshared/helpers.h>
 #include "pass_info.h"
 #include "pass_context.h"
 

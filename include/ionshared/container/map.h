@@ -2,7 +2,7 @@
 
 #include <map>
 #include <optional>
-#include <ionshared/misc/wrapper.h>
+#include <ionshared/wrapper.h>
 
 namespace ionshared {
     template<typename TKey, typename TValue>

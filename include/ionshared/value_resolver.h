@@ -3,7 +3,7 @@
 #include <optional>
 #include <llvm/IR/LLVMContext.h>
 #include <llvm/IR/Constant.h>
-//#include <ionshared/construct/value/integer.h>
+//#include <ionshared/value/integer.h>
 
 namespace ionshared {
     class ValueResolver {

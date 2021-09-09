@@ -1,8 +1,8 @@
 #pragma once
 
 #include <llvm/IR/Instruction.h>
-#include <ionshared/misc/wrapper.h>
-#include <ionshared/misc/safe_wrapper.h>
+#include <ionshared/wrapper.h>
+#include <ionshared/safe_wrapper.h>
 
 namespace ionshared {
     struct LlvmInst : SafeWrapper<llvm::Instruction*> {
