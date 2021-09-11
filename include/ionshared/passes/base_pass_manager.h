@@ -66,7 +66,10 @@ namespace ionshared {
          */
         template<PassLike T>
             requires std::derived_from<T, TPass>
-        bool registerPassWithoutInit(std::shared_ptr<T> pass, auto priority = PassPriority::Normal) {
+        bool registerPassWithoutInit(
+            std::shared_ptr<T> pass,
+            PassPriority priority = PassPriority::Normal
+        ) {
             if (this->registeredPasses.contains(&T::passId)) {
                 return false;
             }
@@ -88,7 +91,10 @@ namespace ionshared {
          */
         template<PassLike T>
             requires std::derived_from<T, TPass>
-        bool registerPass(std::shared_ptr<T> pass, auto priority = PassPriority::Normal) {
+        bool registerPass(
+            std::shared_ptr<T> pass,
+            PassPriority priority = PassPriority::Normal
+        ) {
             auto info = PassInfo();
 
             pass->initialize(info);
