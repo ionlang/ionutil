@@ -5,6 +5,6 @@
 namespace ionshared {
     // TODO: Why have a struct for just a single field? Because of middle point conversions? Ex. dyn_cast<Named>? Where is it even used?
     struct Named {
-        ionshared::StringIndex name;
+        StringIndex name;
     };
 }

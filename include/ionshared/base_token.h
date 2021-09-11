@@ -1,5 +1,6 @@
 #pragma once
 
+#include <string>
 #include <ionshared/string_table.h>
 #include <ionshared/iterable.h>
 
@@ -8,7 +9,7 @@ namespace ionshared {
     struct BaseToken {
         T kind;
 
-        ionshared::StringIndex value;
+        std::string value;
 
         uint32_t startPosition;
 
@@ -16,7 +17,7 @@ namespace ionshared {
 
         BaseToken(
             T kind,
-            ionshared::StringIndex value,
+            std::string value,
             uint32_t startPosition = 0,
             uint32_t lineNumber = 0
         ) :
